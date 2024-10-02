@@ -1,0 +1,256 @@
+/* Style for the body */
+body {
+    margin: 0;
+    display: flex;
+    background-color: rgb(48, 144, 144);
+    color: black;
+    text-align: center;
+}
+
+/* General container styles */
+.container {
+    height: 670px;
+    width: 430px;
+    background-color: rgba(146, 15, 15, 0.1);
+    margin: 20px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+/* Scrollbar styles for the container */
+.container::-webkit-scrollbar {
+    background-color: rgb(157, 157, 157);
+    width: 10px;
+    border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+/* Heading styles within the container */
+.container h2 {
+    height: 30px;
+}
+
+/* Styles for rnds class */
+.rnds {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/* Styles for rnd_no class */
+.rnd_no {
+    text-align: center;
+    background-color: rgb(255, 215, 215);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    color: rgb(112, 112, 112);
+}
+
+/* Styles for rounds class */
+.rounds {
+    height: 100px;
+    background-color: rgb(245, 215, 215);
+    margin: 20px;
+    border-radius: 5px;
+    padding: 2%;
+    height: fit-content;
+}
+
+/* Styles for laps class */
+.laps {
+    height: 28px;
+    width: 98%;
+    background-color: rgb(181, 197, 236);
+    display: flex;
+    color: rgb(21, 7, 7);
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Styles for lap number */
+.lapno {
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+/* Styles for lap time */
+.laptime {
+    margin-left: 30px;
+    margin-top: 2px;
+}
+
+/* Styles for total time display */
+.totaltime {
+    width: fit-content;
+    font-size: 18px;
+    background-color: rgb(211, 112, 131);
+    margin-left: 25%;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+/* Styles for h3 elements */
+h3 {
+    font-size: 40px;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    transform: translate(-10%, -50%);
+}
+
+/* Box styles */
+.box {
+    height: 400px;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+}
+
+/* Time display styles */
+.time {
+    height: 50px;
+    width: fit-content;
+    font-size: 60px;
+    padding: 20px;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Button styles */
+.btns {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: fit-content;
+    padding: 20px;
+    display: flex;
+}
+
+.btns button {
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 18px;
+    flex: 1 1 50%;
+}
+
+/* Button hover effects */
+.start:hover {
+    background-color: #28d383;
+    transition: 0.2s ease;
+    border: 0;
+}
+
+.reset:hover {
+    background-color: #dc3545;
+    transition: 0.2s ease;
+    border: 0;
+}
+
+.pause:hover {
+    background-color: #edc651;
+    transition: 0.2s ease;
+    border: 0;
+}
+
+.lap:hover {
+    background-color: #653ac9;
+    transition: 0.2s ease;
+    border: 0;
+}
+
+/* Media queries for responsive design */
+@media all and (max-width: 1200px) {
+    .container {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+
+    h3 {
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translate(-50%, -10%);
+    }
+
+    .box {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media all and (max-width: 600px) {
+    .box {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 300px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .time {
+        height: 30px;
+        width: fit-content;
+        font-size: 30px;
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .headname {
+        width: 80%;
+        font-size: 30px;
+    }
+
+    .btns {
+        height: 100px;
+        width: 80%;
+        position: absolute;
+        top: 65%;
+        place-items: center;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btns button {
+        height: 35px;
+        width: 80px;
+    }
+}
